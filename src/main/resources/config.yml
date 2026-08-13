@@ -1,0 +1,24 @@
+# 储存形式（慎改）
+drugsFile: "drugs.yml"
+
+# 储存文件后缀（慎改）
+fileType: "YAML"
+
+# 如果启用，“drugsFile”将被视为一个目录，其中 8 个文件将都被视为一种单独的药物
+
+multiFile: false
+
+# 以下为药剂设置（服用过多药剂所获得的效果和药物过期设置）
+overdose:
+  expire: 120 # 药物过期时间
+  effects:
+    nausa: # ID
+      type: "CONFUSION" # 药水效果类型
+      duration: 30 # 效果持续时间
+      amplifier: 1 # 药水等级
+      required: 5 # 如果计数器处于该阶段或更高阶段，则应用该效果
+    weak:
+      type: "WEAKNESS"
+      duration: 30
+      amplifier: 1
+      required: 10
