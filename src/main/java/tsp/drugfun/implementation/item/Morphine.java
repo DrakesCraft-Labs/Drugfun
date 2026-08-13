@@ -19,9 +19,9 @@ public class Morphine extends SlimefunItem {
         super(DrugGroup.GROUP, new SlimefunItemStack(
                 "DRUG_MORPHINE",
                 Material.COCOA_BEANS,
-                "&b医用吗啡",
+                "&bMorfina médica",
                 " ",
-                "&7清除所有负面效果"
+                "&7Quita todos los efectos negativos"
         ), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 SlimefunItems.SPLINT
         }); // TODO: Add recipe
