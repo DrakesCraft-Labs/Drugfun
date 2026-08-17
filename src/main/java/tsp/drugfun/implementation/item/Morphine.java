@@ -1,12 +1,12 @@
 package tsp.drugfun.implementation.item;
 
-import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemUtils;
+import com.github.drakescraft_labs.slimefun4.api.events.PlayerRightClickEvent;
+import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItem;
+import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItemStack;
+import com.github.drakescraft_labs.slimefun4.api.recipes.RecipeType;
+import com.github.drakescraft_labs.slimefun4.core.handlers.ItemUseHandler;
+import com.github.drakescraft_labs.slimefun4.implementation.SlimefunItems;
+import com.github.drakescraft_labs.slimefun4.libraries.dough.items.ItemUtils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -19,17 +19,17 @@ public class Morphine extends SlimefunItem {
         super(DrugGroup.GROUP, new SlimefunItemStack(
                 "DRUG_MORPHINE",
                 Material.COCOA_BEANS,
-                "&b医用吗啡",
+                "&bMorfina medicinal",
                 " ",
-                "&7清除所有负面效果"
+                "&7Elimina todos los efectos negativos"
         ), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 SlimefunItems.SPLINT
         }); // TODO: Add recipe
     }
     
     private final PotionEffectType[] effects = new PotionEffectType[]{
-            PotionEffectType.CONFUSION, PotionEffectType.BLINDNESS, PotionEffectType.WEAKNESS,
-            PotionEffectType.HUNGER, PotionEffectType.SLOW, PotionEffectType.SLOW_DIGGING,
+            PotionEffectType.NAUSEA, PotionEffectType.BLINDNESS, PotionEffectType.WEAKNESS,
+            PotionEffectType.HUNGER, PotionEffectType.SLOWNESS, PotionEffectType.MINING_FATIGUE,
     };
 
     public void onRightClick(PlayerRightClickEvent event) {

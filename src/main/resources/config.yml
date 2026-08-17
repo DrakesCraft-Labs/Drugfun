@@ -1,22 +1,22 @@
-# 储存形式（慎改）
+# Formato de almacenamiento. Cambiarlo puede invalidar datos existentes.
 drugsFile: "drugs.yml"
 
-# 储存文件后缀（慎改）
+# Extension del archivo de almacenamiento. Cambiarla puede invalidar datos existentes.
 fileType: "YAML"
 
-# 如果启用，“drugsFile”将被视为一个目录，其中 8 个文件将都被视为一种单独的药物
+# Si se activa, "drugsFile" se interpreta como un directorio y cada archivo como una droga distinta.
 
 multiFile: false
 
-# 以下为药剂设置（服用过多药剂所获得的效果和药物过期设置）
+# Configuracion de sobredosis y caducidad de las drogas.
 overdose:
-  expire: 120 # 药物过期时间
+  expire: 120 # Tiempo de caducidad de la droga
   effects:
     nausa: # ID
-      type: "CONFUSION" # 药水效果类型
-      duration: 30 # 效果持续时间
-      amplifier: 1 # 药水等级
-      required: 5 # 如果计数器处于该阶段或更高阶段，则应用该效果
+      type: "NAUSEA" # Tipo de efecto de pocion
+      duration: 30 # Duracion del efecto
+      amplifier: 1 # Nivel del efecto
+      required: 5 # Se aplica cuando el contador alcanza este valor
     weak:
       type: "WEAKNESS"
       duration: 30
